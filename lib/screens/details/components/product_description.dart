@@ -25,7 +25,7 @@ class ProductDescription extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: Text(
             product.title,
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         Align(
@@ -43,8 +43,10 @@ class ProductDescription extends StatelessWidget {
             ),
             child: SvgPicture.asset(
               "assets/icons/Heart Icon_2.svg",
-              color:
-                  product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
+              colorFilter: ColorFilter.mode(
+                product.isFavourite ? Color(0xFFFF4848) : Color(0xFFDBDEE4),
+                BlendMode.srcIn,
+              ),
               height: getProportionateScreenWidth(16),
             ),
           ),

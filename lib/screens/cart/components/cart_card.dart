@@ -47,8 +47,9 @@ class CartCard extends StatelessWidget {
                     fontWeight: FontWeight.w600, color: kPrimaryColor),
                 children: [
                   TextSpan(
-                      text: " x${cart.numOfItem}",
-                      style: Theme.of(context).textTheme.bodyText1),
+                    text: " x${cart.numOfItem}",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
                 ],
               ),
             )
